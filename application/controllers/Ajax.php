@@ -40,20 +40,15 @@ class Ajax extends CI_Controller {
 		echo json_encode($resultData);
 	}
 	
-
 	//Mostrar con ajax y datatable
 	public function MostrarCheques()
 	{
-
 		$resultList = $this->c->mostrarCheques();
-
 		$result = array();
 		//$ver = ''; 
-		
 		$i = 1;
 		foreach ($resultList as $key => $value) {
 			//boton para ver detalles de cheques
-
 			$ver = '<a data-backdrop="static" onclick="verInfo('.$value['id_beneficiario'].')"  ><i class="far fa-eye"></i> </a> ';	
 			$result['data'][] = array(
 				$i++,
@@ -70,7 +65,7 @@ class Ajax extends CI_Controller {
 	//Metodo Guardar 
 	public function Guardar()
 	{
-		//Datos de tabla 1 "Cheque"
+		//Datos de tabla  "Cheque"
 		$config = [
 		"upload_path" => "uploads/",
 		'allowed_types' => "png|jpg"
@@ -80,7 +75,6 @@ class Ajax extends CI_Controller {
 		if ($this->upload->do_upload('foto')) {
 			$data = array("foto" => $this->upload->data());
 			//$imagen = time() . str_replace(str_split(' ()\\/,:*?"<>|'), '', $_FILES['foto']['name']);
-			//$datos = $this->ponerFotoCheque();
 			$datos = array('beneficiario' =>$this->input->post('beneficiario'), 
 				'numero_cheque' =>$this->input->post('numero_cheque'),
 				'cuenta_bancaria' =>$this->input->post('cuenta_bancaria'),
@@ -92,7 +86,6 @@ class Ajax extends CI_Controller {
 			$insert = $this->c->insertarCheques($datos);
 			if($insert == TRUE )
 			{
-
 				echo "true";
 			}
 
@@ -101,23 +94,5 @@ class Ajax extends CI_Controller {
 		}
 	
 	}
-
-	/*public function ponerFotoCheque()
-	{
-	  
-		$config['upload_path'] = "uploads/";
-		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size'] = 2048;
- 		
-		$this->load->library('upload', $config);
-        if (!$this->upload->do_upload('foto')) { #Aquí me refiero a "foto", el nombre que pusimos en FormData
-        $error = array('error' => $this->upload->display_errors());
-        echo json_encode($error);
-    } else {
-    	echo json_encode(true);
-    }
-
-	}*/
-
 
 }

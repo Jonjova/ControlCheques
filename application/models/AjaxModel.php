@@ -7,7 +7,6 @@ class AjaxModel extends CI_Model
 	// result_array devuelve datos de tipo de matriz asociativa. 
 	public function mostrarCheques()
 	{
-		
 		$this->db->select('*');
 		$this->db->from('cheques');
 		$query = $this->db->get();
@@ -16,7 +15,6 @@ class AjaxModel extends CI_Model
 		if($query !== FALSE && $query->num_rows() > 0){
 			$data = $query->result_array();
 		}
-
 		return $data;
 	}
 
@@ -34,8 +32,7 @@ class AjaxModel extends CI_Model
 			return true;
 		}else{
 			return false;
-		}
-		
+		}	
 	}
 	
 	//Obtener Cheque Id
