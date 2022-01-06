@@ -1,7 +1,8 @@
 <body>
-<section id="content-wrapper">
-	<div class="row">
-		<div class="col-lg-12">
+	
+	<section id="content-wrapper">
+		<div class="row">
+			<div class="col-lg-12">
 				<div class="container"><br>
 					<h2>Lista de cheques</h2><br>
 					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#ClienteModal">
@@ -23,7 +24,9 @@
 
 						</table>
 					</div>
-				
+
+				</div>
+
 			</div>
 		</div>
 	</section>

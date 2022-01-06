@@ -48,7 +48,7 @@
     <div class="modal-footer">
 
       <button type="button" class="btn btn-secondary pull-left btn-sm" data-dismiss="modal" onclick="limpiar()">Cerrar</button>
-      <button  type="submit" id="btnGuardar" class="btn btn-success btn-sm">Guardar</button> 
+      <button  type="submit" id="btnGuardar" class="btn btn-success btn-sm ">Guardar</button> 
     </div>
   </div>
 </div>

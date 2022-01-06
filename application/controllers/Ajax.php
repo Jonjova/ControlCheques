@@ -37,17 +37,7 @@ class Ajax extends CI_Controller {
 		$this->load->view('layout/footer');
 	}
 
-	public function Cuentas()
-	{
-		//Encabezado 
-		$this->load->view('layout/header');
-		$this->load->view('layout/sidebar');
-		//Body
-
-		$this->load->view('Cuentas/MostrarCuentas');
-		//Pie de pagina
-		$this->load->view('layout/footer');
-	}
+	
 	//LLenar select con ajax 
 	public function obtTBancos()
 	{

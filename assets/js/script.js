@@ -5,3 +5,4 @@ $button.addEventListener('click', (e) => {
   e.preventDefault();
   $wrapper.classList.toggle('toggled');
 });
+

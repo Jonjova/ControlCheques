@@ -1,6 +1,4 @@
-<style type="text/css">
-  
-</style>
+
 <!--Aquí comienza el detalle de Cliente-->
 <div class="modal fade" id="verModal" aria-hidden="true">
   <div class="modal-dialog" role="document">

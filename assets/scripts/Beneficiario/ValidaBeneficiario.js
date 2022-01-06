@@ -30,7 +30,6 @@ jQuery.validator.setDefaults({
     }
 });
 
-
 //validación de campos con la librería de jquery.validate
 $("#createForm").validate({
 	rules: 

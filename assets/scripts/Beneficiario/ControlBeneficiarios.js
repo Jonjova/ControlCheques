@@ -25,11 +25,9 @@ function TB() {
       $.each(data, function(index, object) {
         options += '<option value="' + object.id_tipo_banco + '">' + object.nombre_banco + '</option>'; 
       });
-      $('#id_tipo_banco').html(options);
-            //console.log(data);
-            // $('.bootstrap-select').selectpicker('refresh');
-          }
-        })
+      $('#id_tipo_banco').html(options); 
+        }
+    })
 }
 
 // LLENAR SELECT MUNICIPIOS
@@ -139,16 +137,16 @@ function verInfo(idCheqe) {
     method: "post",
     dataType: "json",
     success: function(response) {
-
+      Ampliar();
       $('#idCheque_').text(response.id_cheques);
       $('#beneficiario_').text(response.nombre_de);
       $('#nombreBanco_').text(response.nombre_banco);
       $('#cuenta_bancaria_').text(response.digitos_cuenta);
       $('#numero_cheque_').text(response.numero_cheque);
       $('#fecha_chueque_').text(response.fecha_chueque);
-      $('#foto_').html('<img src="'+url+'uploads/' + response.foto + '" width="250px" height="150px" style="margin-left: -50px;"/>');
+      $('#foto_').html('<img id="main-img" src="'+url+'uploads/' + response.foto + '" width="250px" height="150px" style="margin-left: -50px;"/>');
       //$('#foto_').text(response.foto);
-      $('#monto_').text(response.monto);
+      $('#monto_').html('$'+response.monto);
       $('#verModal').modal({
         backdrop:"static",
         keyboard:false
@@ -156,3 +154,8 @@ function verInfo(idCheqe) {
     }
   })
 }
+
+function Ampliar() {
+  // body...
+}
+

@@ -13,7 +13,7 @@
         <a href="<?php echo base_url('Ajax/index');?>"><i class="fa fa-plug"></i>Lista de cheques</a>
       </li>
       <li>
-        <a href="<?php echo base_url('Ajax/Cuentas');?>"><i class="fa fa-user"></i>Lista de cuentas</a>
+        <a href="<?php echo base_url('Bancos/index');?>"><i class="fa fa-user"></i>Lista de bancos</a>
       </li>
     </ul>
   </aside>
