@@ -66,7 +66,7 @@
   <button type="submit"  class="btn btn-primary btn-sm">Actualizar</button>
 </div>
 </form>
-<img src="" >
+
 </div>
 </div>
 </div>

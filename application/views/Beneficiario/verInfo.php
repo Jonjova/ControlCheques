@@ -1,3 +1,6 @@
+<style type="text/css">
+  
+</style>
 <!--Aquí comienza el detalle de Cliente-->
 <div class="modal fade" id="verModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -20,22 +23,26 @@
         <div class="col-md-6"><p id="numero_cheque_" ></p></div>  
       </div>
       <div class="row">
-        <div class="col-md-6"><b>Cuenta Bancaria:</b></div> 
+        <div class="col-md-6"><b>Nombre de Banco:</b></div> 
+        <div class="col-md-6"><p id="nombreBanco_" ></p></div>  
+      </div>
+      <div class="row">
+        <div class="col-md-6"><b>Numero Cuenta Bancaria:</b></div> 
         <div class="col-md-6"><p id="cuenta_bancaria_" ></p></div>  
       </div>
       <div class="row">
         <div class="col-md-6"><b>Fecha Chueque:</b></div> 
         <div class="col-md-6"><p id="fecha_chueque_" ></p></div>  
       </div>
+         <div class="row">
+        <div class="col-md-6"><b>Monto:</b></div> 
+        <div class="col-md-6"><p id="monto_" ></p></div>  
+      </div>
       <div class="row">
         <div class="col-md-6"><b>Foto :</b></div> 
         <div class="col-md-6"><p id="foto_" ></p></div>  
       </div>
-      <div class="row">
-        <div class="col-md-6"><b>Monto:</b></div> 
-        <div class="col-md-6"><p id="monto_" ></p></div>  
-      </div>
-    
+
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary pull-left btn-sm" data-dismiss="modal">Cerrar</button>

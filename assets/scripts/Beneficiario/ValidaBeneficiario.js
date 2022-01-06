@@ -35,19 +35,22 @@ jQuery.validator.setDefaults({
 $("#createForm").validate({
 	rules: 
 	{
-		beneficiario: {required: true, minlength: 2, maxlength: 50, lettersonly: true },
+		nombre_de: {required: true },
 		numero_cheque: {required: true, minlength: 2, maxlength: 50 },
 		cuenta_bancaria: {required: true},
 		foto : {required: true},
-		monto : {required: true}	
+		monto : {required: true},
+        id_tipo_banco: {required: true}	
 	},
 	messages:
 	{
-		beneficiario: {required: 'El campo de beneficiario es requerido', lettersonly: 'Sólo letras', minlength: 'El mínimo permitido son 2 caracteres', maxlength: 'El máximo permitido son 50 caracteres'},
+		nombre_de: {required: 'El campo de nombre de es requerido'},
 		numero_cheque: {required: 'El campo de numero cheque es requerido',  minlength: 'El mínimo permitido son 2 caracteres', maxlength: 'El máximo permitido son 50 caracteres'},
-		cuenta_bancaria:  {required: 'El campo de cuenta bancaria es requerido'},
-		foto : {required: 'El campo de foto es requerido'},
-		monto : {required: 'El campo de monto es requerido'}
+		cuenta_bancaria:  {required: 'Cuenta bancaria es requerido'},
+		foto : {required: 'Foto es requerido'},
+		monto : {required: 'Monto es requerido'},
+        id_tipo_banco : {required: 'Banco es requerido'}
+
 	}
 });
 

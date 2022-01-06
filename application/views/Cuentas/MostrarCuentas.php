@@ -1,15 +1,14 @@
-<body>
 <section id="content-wrapper">
 	<div class="row">
 		<div class="col-lg-12">
 				<div class="container"><br>
-					<h2>Lista de cheques</h2><br>
-					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#ClienteModal">
-						Agregar Nuevo Cheque
+					<h2>Lista de cuentas</h2><br>
+					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#CuentaModal">
+						Agregar Nueva Cuenta
 					</button><br><br>
-					<!--Aquí se listan las Cheques.-->
+					<!--Aquí se listan las Cheques.
 					<div class="table-responsive-sm">
-						<table id="Cheques" class="display table table-hover" style="width: 100%;" >
+						<table id="Cuentas" class="display table table-hover" style="width: 100%;" >
 							<thead class="thead-dark">
 								<tr>
 									<th>Id</th>
@@ -23,13 +22,7 @@
 
 						</table>
 					</div>
-				
+				-->
 			</div>
 		</div>
 	</section>
-
-</div>
-
-</body>
-
-
