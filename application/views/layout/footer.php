@@ -11,9 +11,12 @@
 <!--Mantenimientp de Beneficiarios, Cuentas y Bancos  -->
 <script type="text/javascript" src="<?php echo base_url();?>assets/scripts/Beneficiario/ControlBeneficiarios.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/scripts/Beneficiario/ValidaBeneficiario.js"></script>
-<!--Mantenimientp de Cuentas -->
+<!--Mantenimientp de Bancos -->
 <script type="text/javascript" src="<?php echo base_url();?>assets/scripts/Bancos/CrudBancos.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/scripts/Bancos/ValidBancos.js"></script>
+<!--Mantenimientp de Cuentas -->
+<script type="text/javascript" src="<?php echo base_url();?>assets/scripts/Cuentas/CrudCuentas.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/scripts/Cuentas/ValidaCuentas.js"></script>
 <!--Recursos Diseño y alertas -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>

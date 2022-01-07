@@ -10,10 +10,13 @@
         <a href="<?php echo base_url('Ajax/Inicio');?>"><i class="fa fa-home"></i>Inicio</a>
       </li>
       <li>
-        <a href="<?php echo base_url('Ajax/index');?>"><i class="fa fa-plug"></i>Lista de cheques</a>
+        <a href="<?php echo base_url('Ajax/index');?>"><i class="fa fas fa-money-check-alt"></i>Registro de cheques</a>
       </li>
       <li>
-        <a href="<?php echo base_url('Bancos/index');?>"><i class="fa fa-user"></i>Lista de bancos</a>
+        <a href="<?php echo base_url('Bancos/index');?>"><i class="fa fas fa-piggy-bank"></i>Lista de bancos</a>
+      </li>
+      <li>
+        <a href="<?php echo base_url('Cuentas/index');?>"><i class="fa fas fa-user-circle"></i>Lista de Cuentas</a>
       </li>
     </ul>
   </aside>

@@ -6,34 +6,34 @@ $(document).ready(function() {
     $('#Bancos').DataTable({
     	"ajax": url + "Bancos/MostrarBancos",
     	"order": [],
-         destroy: true,
-    	"language": idioma_espanol
-    });
+       destroy: true,
+       "language": idioma_espanol
+   });
 });
 
 //limpia imput y select resetea la validación y remueve la clase del modal 
-function limpiarCuenta() {
-	$('#CuentaModal').modal('hide');
+function limpiarBanco() {
+	$('#BancoModal').modal('hide');
     $('#editBanco').modal('hide');
 
-	$('#crearCuenta').trigger("reset");
-	var validator = $("#crearCuenta").validate();
-	validator.resetForm();
-	$('.form-control').removeClass('is-valid is-invalid');
-	$('.custom-select').removeClass('is-valid is-invalid');
-	$('#Bancos').DataTable().ajax.reload(null, false);
+    $('#crearBanco').trigger("reset");
+    var validator = $("#crearBanco").validate();
+    validator.resetForm();
+    $('.form-control').removeClass('is-valid is-invalid');
+    $('.custom-select').removeClass('is-valid is-invalid');
+    $('#Bancos').DataTable().ajax.reload(null, false);
 }
 
 // Acción de Insertar Bancos.
 $(function() {
-	$("#crearCuenta").submit(function(event) {
+	$("#crearBanco").submit(function(event) {
 		$.ajax({
-			 type:"POST",
-			url: url + 'Bancos/Guardar',
-			data: $("#crearCuenta").serialize(),
-			success: function(response) {
-
-				if (response != '') {
+            type:"POST",
+            url: url + 'Bancos/Guardar',
+            data: $(this).serialize(),
+            success: function(response) {
+                console.log(response);
+                if (response != '') {
                     Swal.fire({
                     	toast:true,
                     	position: 'top-end',
@@ -42,24 +42,27 @@ $(function() {
                     	showConfirmButton: false,
                     	timer: 1500
                     });
-                    limpiarCuenta();
+                    limpiarBanco();
                 }
             },
             error: function() {
             	Swal.fire({
-            		icon: 'error',
-            		title: 'Oops...',
-            		text: 'Algunos campos son requeridos!'
-            	})
+                    toast:true,
+                    icon: 'error',
+                    title: 'Complete los campos!',
+                    timer: 1000,
+                    timerProgressBar: true,
+                    showConfirmButton: false
+                })
 
             }
         });
 		event.preventDefault();
 	});
 
-    });
+});
 
-// Obtener un id de Cliente.
+// Obtener un id de Banco.
 function obtenIdBanco(idBanco, data) {
     $.ajax({
         url: url + 'Bancos/obtenerIdBanco/' + idBanco,
@@ -67,30 +70,30 @@ function obtenIdBanco(idBanco, data) {
         data: { idBanco: idBanco },
         dataType: "json",
         success: function(response) {
-              console.log(response.id_tipo_banco);
-            $('#idBancos').val(response.id_tipo_banco);
-            $('#nombre_banco_').val(response.nombre_banco);
-            $('#editBanco').modal({
-                backdrop: "static",
-                keyboard: false
-            });
-        }
-    })
+          console.log(response.id_tipo_banco);
+          $('#idBancos').val(response.id_tipo_banco);
+          $('#nombre_banco_').val(response.nombre_banco);
+          $('#editBanco').modal({
+            backdrop: "static",
+            keyboard: false
+        });
+      }
+  })
 }
 
-// Acción de Actualizar especialidades.
-$("#editForm").submit(function(event) {
+// Acción de Actualizar Banco.
+$("#editBancoForm").submit(function(event) {
     event.preventDefault();
     $.ajax({
         url: url + 'Bancos/Actualizar',
-        data: $("#editForm").serialize(),
+        data: $("#editBancoForm").serialize(),
         type: "post",
         async: false,
         dataType: 'json',
         success: function(response) {
 
             if (response == 1) {
-               
+             
                 Swal.fire({
                     toast:true,
                     position: 'top-end',
@@ -99,7 +102,7 @@ $("#editForm").submit(function(event) {
                     showConfirmButton: false,
                     timer: 1500
                 })
-                limpiarCuenta();
+                limpiarBanco();
             }
 
         },

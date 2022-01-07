@@ -1,6 +1,6 @@
 
 //validación de campos con la librería de jquery.validate
-$("#crearCuenta").validate({
+$("#crearBanco").validate({
 	rules: 
 	{
 		nombre_banco: {required: true }

@@ -58,9 +58,7 @@ class Ajax extends CI_Controller {
 	{
 		$resultData = $this->c->obtenCheqId(array('id_cheques'=>$idCheque ));
 		//Codificamos a json par aobtener la respuesta. 
-		echo json_encode($resultData);
-
-		
+		echo json_encode($resultData);	
 	}
 	
 	//Mostrar con ajax y datatable

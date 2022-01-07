@@ -26,8 +26,8 @@ function TB() {
         options += '<option value="' + object.id_tipo_banco + '">' + object.nombre_banco + '</option>'; 
       });
       $('#id_tipo_banco').html(options); 
-        }
-    })
+    }
+  })
 }
 
 // LLENAR SELECT MUNICIPIOS
@@ -104,14 +104,17 @@ $(function() {
           }
         },
         error: function() {
-          Swal.fire({
-           icon: 'error',
-           title: 'Oops...',
-           text: 'Algunos campos son requeridos!'
-         });
+         Swal.fire({
+          toast:true,
+          icon: 'error',
+          title: 'Complete los campos!',
+          timer: 1000,
+          timerProgressBar: true,
+          showConfirmButton: false
+        })
 
-        }
-      });
+       }
+     });
       event.preventDefault();
     }
   });
