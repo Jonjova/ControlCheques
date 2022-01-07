@@ -2,7 +2,7 @@
 
   <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-<img src="<?php echo base_url('Assets/img/waresoft.jpg');?>" width="75px" alt="Waresoft">
+<img src="<?php echo base_url('Assets/img/waresoft.jpg');?>" class="circulo" width="75px" alt="Waresoft">
       
     </div>
     <ul class="sidebar-nav">

@@ -1,7 +1,7 @@
 <!-- Aqui comienza el modal de editar -->
 <div class="modal fade" id="editBanco" aria-hidden="true" >
   <div class="modal-dialog " role="document">
-    <div class="modal-content">
+    <div class="modal-content" style="opacity: 0.90;background-color: #eee;">
       <div class="modal-header">
         <h5 class="modal-title">Editar información de Banco</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">

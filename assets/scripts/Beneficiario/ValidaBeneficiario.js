@@ -35,24 +35,41 @@ $("#createForm").validate({
 	rules: 
 	{
 		nombre_de: {required: true },
-		numero_cheque: {required: true, minlength: 2, maxlength: 50 },
+		numero_cheque: {required: true,number:true},
 		cuenta_bancaria: {required: true},
 		foto : {required: true},
-		monto : {required: true},
+		monto : {required: true,number:true},
         id_tipo_banco: {required: true}	
 	},
 	messages:
 	{
 		nombre_de: {required: 'El campo de nombre de es requerido'},
-		numero_cheque: {required: 'El campo de numero cheque es requerido',  minlength: 'El mínimo permitido son 2 caracteres', maxlength: 'El máximo permitido son 50 caracteres'},
+		numero_cheque: {required: 'El campo de numero cheque es requerido', number:'Solo números'},
 		cuenta_bancaria:  {required: 'Cuenta bancaria es requerido'},
 		foto : {required: 'Foto es requerido'},
-		monto : {required: 'Monto es requerido'},
+		monto : {required: 'Monto es requerido',number:'Solo números'},
         id_tipo_banco : {required: 'Banco es requerido'}
 
 	}
 });
 
+//calidacion ingresar solo numeros
+$('input[name="numero_cheque"]').keyup(function(e)
+                                {
+  if (/\D/g.test(this.value))
+  {
+    // Filter non-digits from input value.
+    this.value = this.value.replace(/\D/g, '');
+  }
+});
 
+$('input[name="monto"]').keyup(function(e)
+                                {
+  if (/\D/g.test(this.value))
+  {
+    // Filter non-digits from input value.
+    this.value = this.value.replace(/\D/g, '');
+  }
+});
 //validación de campos con la libreria de jquery.mask
-$('#telefono').mask('9999-9999');
+//$('#numero_cheque').mask('9999-9999');

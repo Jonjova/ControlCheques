@@ -2,9 +2,9 @@
 
 <div>
   <form id="createForm"  method="post" enctype="multipart/form-data" class="needs-validation" >
-    <div class="modal fade " id="ClienteModal" aria-hidden="true">
+    <div class="modal fade " id="ClienteModal" aria-hidden="true" >
       <div class="modal-dialog  modal-lg" role="document">
-        <div class="modal-content">
+        <div class="modal-content" style="opacity: 0.90;background-color: #eee;">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLongTitle">Nuevo Cheque</h5>
             <div id="msg"></div>

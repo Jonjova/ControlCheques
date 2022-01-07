@@ -2,9 +2,9 @@
 
 <div>
   <form id="crearBanco"  method="post"  class="needs-validation" >
-    <div class="modal fade " id="BancoModal" aria-hidden="true">
+    <div class="modal fade " id="BancoModal" aria-hidden="true" >
       <div class="modal-dialog " role="document">
-        <div class="modal-content">
+        <div class="modal-content" style="opacity: 0.90;background-color: #eee;">
           <div class="modal-header">
             <h5 class="modal-title" >Nuevo Banco</h5>
            

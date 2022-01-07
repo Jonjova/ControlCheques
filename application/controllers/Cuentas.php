@@ -87,5 +87,30 @@ class Cuentas extends CI_Controller {
 		}
 
 	}
+	//obtener cuenta existente 
+	public function ObtenerInfoCuenta()
+	{
+		$valor = $this->input->post('digitos_cuenta');
+		$resultado = $this->cm->OIC($valor);
+		echo json_encode($resultado);
+	}
+
+
+	// Validar cuenta existente
+	public function validarCuenta()
+	{ 
+		$valor = $this->input->post('digitos_cuenta');
+		$resultado = $this->cm->findCuenta($valor);
+		
+		if($resultado)
+		{
+
+			echo 1;
+		}
+		else
+		{
+			echo 0;
+		}
+	}
 
 }

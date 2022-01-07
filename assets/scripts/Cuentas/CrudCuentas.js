@@ -34,7 +34,7 @@ function obtBancos() {
 function limpiarCuenta() {
 	$('#CuentaModal').modal('hide');
   $('#editCuenta').modal('hide');
-
+   infoCuentaLimpiar();
   $('#crearCuenta').trigger("reset");
   var validator = $("#crearCuenta").validate();
   validator.resetForm();

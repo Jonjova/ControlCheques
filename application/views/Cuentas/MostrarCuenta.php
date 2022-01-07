@@ -2,11 +2,11 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="container">
-			<div class="shadow p-3 mb-5 bg-white rounded">
+			<div class="shadow-sm p-3 mb-5 bg-white rounded">
 				<h2 class="subtitle">Lista de Cuentas</h2>
 				</div>
 				<!--Aquí se listan las Bancos.-->
-				<div class="table-responsive-sm shadow p-3 mb-5 bg-white rounded">
+				<div class="shadow p-3 mb-5 bg-white rounded" style="margin-top: -30px;">
 					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#CuentaModal">
 						Agregar Nueva Cuenta
 					</button><br><br>

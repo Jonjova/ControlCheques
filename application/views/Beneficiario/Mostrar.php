@@ -4,12 +4,12 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="container-fluid ">
-				<div class="shadow p-3 mb-5 bg-white rounded">
+				<div class="shadow-sm p-3 mb-5 bg-white rounded">
 					<h2 class="subtitle">Lista de cheques</h2>
 					
 					</div>
 					<!--Aquí se listan las Cheques.-->
-					<div class="table-responsive-sm shadow p-3 mb-5 bg-white rounded">
+					<div class="shadow p-3 mb-5 bg-white rounded" style="margin-top: -30px;">
 					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#ClienteModal">
 						Agregar Nuevo Cheque
 					</button><br><br>

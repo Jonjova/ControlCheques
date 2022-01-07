@@ -12,15 +12,13 @@ select c.id_cheques,t.nombre_banco,d.digitos_cuenta as numero_cuenta,d.nombre_de
 					Consultas de tipo de bancos													   
 ==========================================================*/
 
-select tb.id_tipo_banco,tb.nombre_banco,tc.nombre_tipo_cuenta_banco
-		from tipo_bancos tb
-        inner join tipo_cuentas tc on tb.id_tipo_cuenta = tc.id_tipo_cuenta;
+select * from tipo_bancos ;
 
 /*========================================================
 					Consultas de datos cuenta													   
 ==========================================================*/
 
-select d.id_datos_cuenta,d.digitos_cuenta,tc.nombre_tipo_cuenta_banco,tb.nombre_banco
+select d.id_datos_cuenta,d.nombre_de,d.digitos_cuenta,tb.nombre_banco
 		from datos_cuenta d
-        inner join tipo_cuentas tc on d.id_tipo_cuenta = tc.id_tipo_cuenta
-        inner join tipo_bancos tb on d.id_tipo_banco = tb.id_tipo_banco;
+        inner join tipo_bancos tb on d.id_tipo_banco = tb.id_tipo_banco
+        where d.digitos_cuenta = '4654987987';

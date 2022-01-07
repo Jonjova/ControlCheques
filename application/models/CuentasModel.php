@@ -45,4 +45,22 @@ class CuentasModel extends CI_Model
 		$query = $this->db->update($tablename,$data,$where);
 		return $query;
 	}
+	//buscar  cuenta existente
+	public function OIC($valor)
+	{
+		$this->db->select('d.id_datos_cuenta,d.nombre_de,d.digitos_cuenta,tb.nombre_banco');
+
+		$this->db->from('datos_cuenta d');
+		$this->db->join('tipo_bancos tb ', 'd.id_tipo_banco = tb.id_tipo_banco');
+		$this->db->like('d.digitos_cuenta', $valor); 
+		return $this->db->get()->row_array();
+	}
+
+
+	// VALIDAR CUENTA
+	public function findCuenta($valor)
+	{
+		$this->db->where('digitos_cuenta', $valor);
+		return $this->db->get('datos_cuenta')->result();
+	}
 }
