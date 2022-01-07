@@ -37,8 +37,8 @@ class Cuentas extends CI_Controller {
 			$editar = '<a onclick="obtenIdCuenta('.$value['id_datos_cuenta'].')" > <i class="fas fa-edit fa-lg"></i></a> ';
 			$result['data'][] = array(
 				$i++,
-				$value['digitos_cuenta'],
 				$value['nombre_de'],
+				$value['digitos_cuenta'],
 				$value['nombre_banco'],
 				$editar 
 				);

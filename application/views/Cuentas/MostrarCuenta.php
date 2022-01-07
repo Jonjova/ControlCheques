@@ -16,7 +16,7 @@
 								<th>Id</th>
 								<th>A Nombre de </th>
 								<th>No de cuenta </th>
-								<th>Tipos de Bancos </th>
+								<th>Nombre de Banco </th>
 								<th>Accion</th>
 							</tr>
 						</thead>
