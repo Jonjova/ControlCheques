@@ -10,7 +10,7 @@
 			</div>
 		</div>
 
-		<div class="book" style="left: 45px;top: 25px;">
+		<div class="book" style="left: 500px;top: 200px;">
 			<div class="inner">
 				<div class="left"></div>
 				<div class="middle"></div>

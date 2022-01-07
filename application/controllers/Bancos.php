@@ -11,7 +11,8 @@ class Bancos extends CI_Controller {
 	public function index()
 	{
 		//Encabezado 
-		$this->load->view('layout/header');
+		$data = array('title' => 'Banco' );
+		$this->load->view('layout/header',$data);
 		$this->load->view('layout/sidebar');
 		//Body
 		$this->load->view('Bancos/MostrarBancos');

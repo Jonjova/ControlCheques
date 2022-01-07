@@ -12,8 +12,10 @@ class Ajax extends CI_Controller {
 
 	public function index()
 	{
+
 		//Encabezado 
-		$this->load->view('layout/header');
+		$data = array('title' => 'Cheques' );
+		$this->load->view('layout/header',$data);
 		$this->load->view('layout/sidebar');
 		//Body
 
@@ -28,7 +30,8 @@ class Ajax extends CI_Controller {
 	public function Inicio()
 	{
 		//Encabezado 
-		$this->load->view('layout/header');
+		$data = array('title' => 'Inicio' );
+		$this->load->view('layout/header',$data);
 		$this->load->view('layout/sidebar');
 		//Body
 
