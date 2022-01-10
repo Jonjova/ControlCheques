@@ -1,18 +1,18 @@
-create database sis_cc;
-drop  database sis_cc;
+create database if not exists sis_cc;
+ drop  database sis_cc;
 use sis_cc;
 
 /*========================================================
 						Tabla de tipo de bancos 													   
 ==========================================================*/
-create table tipo_bancos(
+create table if not exists tipo_bancos(
 	id_tipo_banco int not null primary key auto_increment,
 	nombre_banco varchar(250) not null
 );
 /*========================================================
 						Tabla de datos cuenta 													   
 ==========================================================*/
-create table datos_cuenta(
+create table if not exists datos_cuenta(
   id_datos_cuenta int not null primary key auto_increment,
   digitos_cuenta varchar(25) not null,
   nombre_de varchar(250) not null,
@@ -23,7 +23,7 @@ create table datos_cuenta(
 /*========================================================
 						Tabla de cheques 													   
 ==========================================================*/
-create table cheques(
+create table if not exists cheques(
 	id_cheques  int not null primary key auto_increment ,
     numero_cheque varchar(15) not null,
     id_datos_cuenta int not null,

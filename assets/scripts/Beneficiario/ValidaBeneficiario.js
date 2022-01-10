@@ -63,13 +63,26 @@ $('input[name="numero_cheque"]').keyup(function(e)
   }
 });
 
-$('input[name="monto"]').keyup(function(e)
-                                {
-  if (/\D/g.test(this.value))
-  {
-    // Filter non-digits from input value.
-    this.value = this.value.replace(/\D/g, '');
-  }
-});
+
+
+$('input[name="monto"]').bind("change keyup input", function() {
+    var position = this.selectionStart - 1;
+    //remove all but number and .
+    var fixed = this.value.replace(/[^0-9\.]/g, "");
+    if (fixed.charAt(0) === ".")
+      //can't start with .
+      fixed = fixed.slice(1);
+
+    var pos = fixed.indexOf(".") + 1;
+    if (pos >= 0)
+      //avoid more than one .
+      fixed = fixed.substr(0, pos) + fixed.slice(pos).replace(".", "");
+
+    if (this.value !== fixed) {
+      this.value = fixed;
+      this.selectionStart = position;
+      this.selectionEnd = position;
+    }
+  });
 //validación de campos con la libreria de jquery.mask
 //$('#numero_cheque').mask('9999-9999');

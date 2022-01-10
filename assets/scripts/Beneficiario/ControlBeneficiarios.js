@@ -141,9 +141,6 @@ function verInfo(idCheqe) {
     dataType: "json",
     success: function(response) {
 
-    
-    
-
       $('#idCheque_').text(response.id_cheques);
       $('#beneficiario_').text(response.nombre_de);
       $('#nombreBanco_').text(response.nombre_banco);

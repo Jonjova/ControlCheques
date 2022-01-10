@@ -25,6 +25,7 @@ $('#digitos_cuenta_cd').change(function() {
 				$('#nombre_banco_c').val(msg.nombre_de).attr('readonly', true);
 				$('#id_tipo_banco_cd option:selected').text(msg.nombre_banco).attr("disabled", true)
 				$('#id_tipo_banco_cd option:not(:selected)').attr('disabled', true);
+
 				$('#btnGuardar').attr('disabled', true);
 				Swal.fire({
 					toast:true,
@@ -45,6 +46,7 @@ $('#digitos_cuenta_cd').change(function() {
 
 function infoCuentaLimpiar() {
 	$('#nombre_banco_c').val('').attr('readonly', false);
+	$('#id_tipo_banco_cd option:selected').text('Seleccione...').attr("disabled", true)
 	$('#id_tipo_banco_cd option').attr('disabled', false);
 	$('#btnGuardar').attr('disabled', false);
 	
@@ -77,7 +79,6 @@ $('input[name="digitos_cuenta"]').keyup(function(e)
         }
     });
     return resp;
-});
-
+},'Esta cuenta ya esxiste!');
 
 */
