@@ -15,7 +15,7 @@
 							<tr>
 								<th>Id</th>
 								<th>Nombre Banco </th>
-								<th>Accion</th>
+								<th>Acción</th>
 							</tr>
 						</thead>
 

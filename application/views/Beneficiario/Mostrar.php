@@ -21,7 +21,7 @@
 									<th>A nombre de </th>
 									<th>Fecha chueque</th>
 									<th>Monto</th>
-									<th>Accion</th>	
+									<th>Acción</th>	
 								</tr>
 							</thead>
 

@@ -17,7 +17,7 @@
 								<th>A Nombre de </th>
 								<th>No de cuenta </th>
 								<th>Nombre de Banco </th>
-								<th>Accion</th>
+								<th>Acción</th>
 							</tr>
 						</thead>
 
