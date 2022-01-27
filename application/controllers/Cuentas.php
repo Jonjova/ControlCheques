@@ -24,7 +24,7 @@ class Cuentas extends CI_Controller {
 		$this->load->view('layout/footer');
 	}
 
-		//Mostrar con ajax y datatable
+	//Mostrar con ajax y datatable
 	public function MostrarCuenta()
 	{
 		$resultList = $this->cm->mostrarCuenta();
@@ -46,7 +46,7 @@ class Cuentas extends CI_Controller {
 		echo json_encode($result);
 	}
 
-		//LLenar select con ajax 
+	//LLenar select con ajax 
 	public function obtTB()
 	{
 		$datos = $this->c->tipoBancos();
@@ -64,7 +64,7 @@ class Cuentas extends CI_Controller {
 		}	
 	}
 
-		//Obtener el id un Cheque 
+		//Obtener el id un Cuenta 
 	public function obtenerIdCuenta($id_datos_cuenta)
 	{
 		$resultData = $this->cm->obtenCuentaId(array('id_datos_cuenta'=>$id_datos_cuenta ));

@@ -30,7 +30,7 @@ function TB() {
   })
 }
 
-// LLENAR SELECT MUNICIPIOS
+// LLENAR SELECT BANCOS
 jQuery(document).ready(function() {
   $("[name='id_tipo_banco']").on('change', function() {
     event.preventDefault();
@@ -67,7 +67,7 @@ jQuery(document).ready(function() {
 });
 
 
-// Acción de Insertar especialidades.
+// Acción de Insertar .
 $(function() {
 	var $fotoCheque = $("#foto");
 
@@ -133,7 +133,7 @@ function limpiar() {
  $('.custom-select').removeClass('is-valid is-invalid');
  $('#Cheques').DataTable().ajax.reload(null, false);
 }
-// Obtener un datos por id de Cliente en modal.
+// Obtener un datos por id de idCheqe en modal.
 function verInfo(idCheqe) {
   $.ajax({
     url: url + 'Ajax/obtenerIdCheque/' + idCheqe,

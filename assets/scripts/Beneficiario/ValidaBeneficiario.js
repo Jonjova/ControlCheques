@@ -53,7 +53,7 @@ $("#createForm").validate({
 	}
 });
 
-//calidacion ingresar solo numeros
+//validación ingresar solo numeros
 $('input[name="numero_cheque"]').keyup(function(e)
                                 {
   if (/\D/g.test(this.value))

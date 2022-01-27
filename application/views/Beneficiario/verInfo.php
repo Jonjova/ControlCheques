@@ -37,7 +37,7 @@
         <div class="col-md-6"><p id="monto_" ></p></div>  
       </div>
       <div class="row">
-        <div class="col-md-6"><b>Foto:</b></div> 
+        <div class="col-md-6"><b>Foto cheque:</b></div> 
         <div class="col-md-6"><p id="foto_" ></p></div>  
       </div>
 

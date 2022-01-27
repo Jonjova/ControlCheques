@@ -12,7 +12,5 @@ $("#crearBanco").validate({
 	
 	}
 });
-
-
 //validación de campos con la libreria de jquery.mask
-$('#telefono').mask('9999-9999');
+$('#ejemplo').mask('9999-9999');

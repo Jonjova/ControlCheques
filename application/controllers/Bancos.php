@@ -41,7 +41,7 @@ class Bancos extends CI_Controller {
 		echo json_encode($result);
 	}
 
-	//Metodo Guardar Cuenta
+	//Metodo Guardar Bancos
 	public function Guardar()
 	{
 		

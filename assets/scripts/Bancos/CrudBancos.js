@@ -2,7 +2,7 @@
 $(document).ready(function() {
   //DatosCuenta();
   TB();
-    //Mostrar elementos de la tabla Cheques.
+    //Mostrar elementos de la tabla Bancos.
     $('#Bancos').DataTable({
     	"ajax": url + "Bancos/MostrarBancos",
     	"order": [],

@@ -18,10 +18,8 @@ class Ajax extends CI_Controller {
 		$this->load->view('layout/header',$data);
 		$this->load->view('layout/sidebar');
 		//Body
-
 		$this->load->view('Beneficiario/Mostrar');
 		$this->load->view('Beneficiario/Agregar');
-		$this->load->view('Beneficiario/Actualizar');
 		$this->load->view('Beneficiario/verInfo');
 		
 		//Pie de pagina
@@ -34,12 +32,10 @@ class Ajax extends CI_Controller {
 		$this->load->view('layout/header',$data);
 		$this->load->view('layout/sidebar');
 		//Body
-
 		$this->load->view('Inicio');
 		//Pie de pagina
 		$this->load->view('layout/footer');
 	}
-
 	
 	//LLenar select con ajax 
 	public function obtTBancos()

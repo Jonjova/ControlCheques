@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
  obtBancos();
-    //Mostrar elementos de la tabla Cheques.
+    //Mostrar elementos de la tabla Cuentas.
     $('#Cuenta').DataTable({
     	"ajax": url + "Cuentas/MostrarCuenta",
     	"order": [],
@@ -10,7 +10,7 @@ $(document).ready(function() {
     });
   });
 
-//obteniendo  Tipo de bancos 
+//obteniendo  Tipo de Cuentas 
 function obtBancos() {
 
   $.ajax({
@@ -43,7 +43,7 @@ function limpiarCuenta() {
   $('#Cuenta').DataTable().ajax.reload(null, false);
 }
 
-// Acción de Insertar Bancos.
+// Acción de Insertar Cuentas.
 $(function() {
   $("#crearCuenta").submit(function(event) {
     $.ajax({
@@ -81,7 +81,7 @@ $(function() {
 
 });
 
-// Obtener un id de Cuenta.
+// Obtener un id de Cuentas.
 function obtenIdCuenta(idCuenta, data) {
   $.ajax({
     url: url + 'Cuentas/obtenerIdCuenta/' + idCuenta,

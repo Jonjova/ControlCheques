@@ -19,7 +19,7 @@
 									<th>Id</th>
 									<th>Nombre de Banco </th>
 									<th>A nombre de </th>
-									<th>Fecha chueque</th>
+									<th>Fecha cheque</th>
 									<th>Monto</th>
 									<th>Acción</th>	
 								</tr>
